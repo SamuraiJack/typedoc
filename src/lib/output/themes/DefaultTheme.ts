@@ -389,11 +389,7 @@ export class NavigationBuilder {
             }
         });
 
-        if (modules.length < 10) {
-            this.buildGroups(modules, root);
-        } else {
-            this.buildGroups(this.entryPoint.getChildrenByKind(ReflectionKind.SomeModule), root, true);
-        }
+        this.buildGroups(modules, root);
 
         return root;
     }
